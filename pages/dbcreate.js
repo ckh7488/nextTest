@@ -5,7 +5,7 @@ export default function dbc(){
     return (
         <button onClick={()=>{
             setCounter(counter+1);
-            fetch(`http://localhost:3000/api/createDbCollections/${counter}`).then(r=>r.json()).then(console.log)
+            fetch(`/api/createDbCollections/${counter}`).then(r=>r.json()).then(console.log)
         }}>{counter}</button>
     )
 }

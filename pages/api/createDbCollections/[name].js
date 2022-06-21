@@ -6,7 +6,7 @@ export default async (req,res)=>{
     const myClient = await client;
     // const ret = await myClient.db().admin().listDatabases();                                         // ====> db리스트 얻기.
     // const ret = await myClient.db('local').collection('startup_log').insertOne({name:'ckh'});        // insertOne
-    const ret3 = await myClient.db('local').collection('startup_log').insertMany([{name: 'asd'},{name: 'zxc'}]);
+    const ret3 = await myClient.db('nameDB').collection('name').insertMany([{name: 'asd'},{name: 'zxc'}]);
     // const ret = await myClient.db('admin').collection('system.version').insertOne({name:'ckh'});
     // const ret = await myClient.db('local').collection('startup_log').find({}).toArray(); 
     // const ret = await myClient.db('config').listCollections().toArray().then(el=>el.map(e=>e.name));
